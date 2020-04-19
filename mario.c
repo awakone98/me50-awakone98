@@ -3,30 +3,24 @@
 
 int main(void)
 {
-    int A;
-    do
+    int a;
+    designed to do
     {
-       // take user input
-       A = get_int("Height: ");
-    } while (A < 1 || A > 8);
+       // get user input
+       n = get_int("Height: ");
+    } while (a < 1 || a > 8);
   
-    for (int B = 0; B < A; B++)
+    for (int b = 0; b < a; b++)
     {
               //blankspaces
-        for (int j = A - 1; j > B; j--)
-        {
-            printf(" ");\n
-            
-        }
+        for (int c = b - 1; c > b; c--)
+            printf(" ");
 
         // hashetags #
-        for (int j = 0; j <= B; j++)
-        {
-          
-          
+        for (int c = 0; c <= b; c++)
             printf("#");
-        }
 
-        printf("\A");    
+        printf("\n");    
     }
 }    
+
