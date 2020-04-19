@@ -28,13 +28,13 @@ int main(void)
 
     while (cents >= 5)
     {
-        cents-= 5; 
+        cents -= 5; 
         coins++;
     }
     
     while (cents >= 1)
     {
-        cents-= 1; 
+        cents -= 1; 
         coins++;
     }
 
