@@ -14,12 +14,16 @@ int main(void)
     {
               //blankspaces
         for (int j = A - 1; j > B; j--)
-            printf(" ");
+        {\n
+            printf(" ");\n
+        }
 
         // hashetags #
         for (int j = 0; j <= B; j++)
+        {\n
             printf("#");
-
+        }\n
+        
         printf("\A");    
     }
 }    
