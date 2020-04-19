@@ -3,24 +3,23 @@
 
 int main(void)
 {
-    int a;
-    designed to do
+    int n;
+    do
     {
-       // get user input
+       // take user input
        n = get_int("Height: ");
-    } while (a < 1 || a > 8);
+    } while (n < 1 || n > 8);
   
-    for (int b = 0; b < a; b++)
+    for (int i = 0; i < n; i++)
     {
               //blankspaces
-        for (int c = b - 1; c > b; c--)
+        for (int j = n - 1; j > i; j--)
             printf(" ");
 
         // hashetags #
-        for (int c = 0; c <= b; c++)
+        for (int j = 0; j <= i; j++)
             printf("#");
 
         printf("\n");    
     }
-}    
-
+}  
