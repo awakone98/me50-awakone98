@@ -13,22 +13,23 @@ int main(void)
 //Wordcount
     for (int i = 0; i < strlen(text); i++)
     {
-       if ((text[i] >= 'a' && text[i] <= 'z') || (text[i] >= 'A' && text[i] <= 'Z'))
-       {
-           letterscount++;
-       }
-       else if (text[i] == ' ')
-       {
-           wordcount++;
-       }
-       else if (text[i] == '.' || text[i] == '!' || text[i] == '?')
-       {
-           sentencecount++;
-       }
+         if ((text[i] >= 'a' && text[i] <= 'z') || (text[i] >= 'A' && text[i] <= 'Z'))
+         {
+            letterscount++;
+         }
+         else if (text[i] == ' ')
+         {
+              wordcount++;
+         }
+         else if (text[i] == '.' || text[i] == '!' || text[i] == '?')
+         {
+             sentencecount++;
+         }
     }
 //    printf("letterscount and wordcount = %i, sentencecount = %i\n");
 
-    float grade = 0.0588 * (100 * (float) letterscount / (float) wordcount) - 0.296 * (100 * (float) sentencecount / (float) wordcount) - 15.8;
+    float grade = 0.0588 * (100 * (float) letterscount / (float) wordcount) - 0.296 * (100 * (float) sentencecount / 
+                  (float) wordcount) - 15.8;
     if (grade < 16 && grade >= 0)
     {
         printf("Grade %i\n", (int) round(grade));
