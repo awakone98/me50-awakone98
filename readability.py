@@ -3,7 +3,7 @@ from cs50 import get_string
 # user text input 
 text = get_string("Text: \n")
 
-count = 0
+count = 1
 
 letters = 0
 
