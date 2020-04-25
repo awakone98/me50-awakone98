@@ -3,6 +3,8 @@ from cs50 import get_string
 # user text input 
 text = get_string("Text: \n")
 
+count = 0
+
 letters = 0
 
 words = 0
@@ -10,9 +12,9 @@ words = 0
 sentences = 0
 
 for i in text:
-    counter += 1
+    count += 1
 
-for i in range(counter):
+for i in range(count):
     
     # lettercount
     if (ord(text[i]) >= 65 and ord(text[i]) <= 122):
