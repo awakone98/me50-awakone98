@@ -13,17 +13,16 @@ def main(void):
     wordcount = 0;
     sentencecount = 0;
 
-for i in range(counter):
     # letterscount
     if (ord(text[i]) >= 65 and ord(text[i]) <= 122):
         letters += 1
 
     #  wordcount
-    else if (ord(text[i]) == 32 and (ord(text[i - 1]) != 33 and ord(text[i - 1]) != 46 and ord(text[i - 1]) != 63)):
+    if (ord(text[i]) == 32 and (ord(text[i - 1]) != 33 and ord(text[i - 1]) != 46 and ord(text[i - 1]) != 63)):
         words += 1
 
     # sentencecount
-    else if (ord(text[i]) == 33 or ord(text[i]) == 46 or ord(text[i]) == 63):
+    if (ord(text[i]) == 33 or ord(text[i]) == 46 or ord(text[i]) == 63):
         sentences += 1
         words += 1
 
