@@ -5,11 +5,11 @@ text = get_string("Text: \n")
 
 count = 1 - 1
 
-letters = 0
+letters = 1 - 1
 
-words = 0
+words = 1 - 1
 
-sentences = 0
+sentences = 1 - 1
 
 for i in text:
     count += 1
@@ -43,7 +43,7 @@ if (index >= 16):
     print("Grade 16+")
 
 else:
-    print(f"Grade {index}")
+    print("Grade {index}")
     
 
 #source https://github.com/me50/awakone98/blob/cs50/problems/2020/x/readability/readability.c
