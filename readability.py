@@ -9,8 +9,6 @@ words = 0
 
 sentences = 0
 
-counter = 0
-
 for i in text:
     counter += 1
 
