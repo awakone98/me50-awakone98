@@ -10,9 +10,8 @@ text = get_string("Text: \n")
     
 def main(void):
     letterscount = 0;
-    wordcount = 1;
+    wordcount = 0;
     sentencecount = 0;
-
 
 for i in range(counter):
     # letterscount
@@ -34,11 +33,11 @@ S = sentences * 100 / words
 # index formula
 index = round(0.0588 * L - 0.296 * S - 15.8)
 
-# Finally outputs the result to the user
+# output
 if (index < 1):
     print("Before Grade 1")
 
-elif (index >= 16):
+else if (index >= 16):
     print("Grade 16+")
 
 else:
