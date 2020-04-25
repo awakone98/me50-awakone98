@@ -13,25 +13,38 @@ def main(void):
     wordcount = 1;
     sentencecount = 0;
 
-#Wordcount
-  for (int i = 0; i < strlen(text); i++)
-         if ((text[i] >= 'a' && text[i] <= 'z') || (text[i] >= 'A' && text[i] <= 'Z'))
-            letterscount++;
-         else if (text[i] == ' ')
-              wordcount++;
-         else if (text[i] == '.' || text[i] == '!' || text[i] == '?')
-             sentencecount++;
-#print("letterscount and wordcount = %i, sentencecount = %i\n");
 
-    float grade = 0.0588 * (100 * (float) letterscount / (float) wordcount) - 0.296 * (100 * (float) sentencecount / 
-                  (float) wordcount) - 15.8;
-    if (grade < 16 && grade >= 0)
-        print("Grade %i\n", (int) round(grade));
-    else if (grade >= 16)
-        print("Grade 16+\n");
-    else:
-        print("Before Grade 1\n");
+for i in range(counter):
+    # letterscount
+    if (ord(text[i]) >= 65 and ord(text[i]) <= 122):
+        letters += 1
 
+    #  wordcount
+    else if (ord(text[i]) == 32 and (ord(text[i - 1]) != 33 and ord(text[i - 1]) != 46 and ord(text[i - 1]) != 63)):
+        words += 1
+
+    # sentencecount
+    else if (ord(text[i]) == 33 or ord(text[i]) == 46 or ord(text[i]) == 63):
+        sentences += 1
+        words += 1
+
+L = letters * 100 / words
+S = sentences * 100 / words
+
+# index formula
+index = round(0.0588 * L - 0.296 * S - 15.8)
+
+# Finally outputs the result to the user
+if (index < 1):
+    print("Before Grade 1")
+
+elif (index >= 16):
+    print("Grade 16+")
+
+else:
+    print("Grade {index}")
+    
 if __name__ == "__main__":
      main()
-     
+
+#source https://github.com/me50/awakone98/blob/cs50/problems/2020/x/readability/readability.c
