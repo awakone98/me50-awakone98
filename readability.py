@@ -4,14 +4,18 @@ from cs50 import get_string
 text = get_string("Text: \n")
 
 letters = 0
+
 words = 0
+
 sentences = 0
+
 counter = 0
 
 for i in text:
     counter += 1
 
 for i in range(counter):
+    
     # lettercount
     if (ord(text[i]) >= 65 and ord(text[i]) <= 122):
         letters += 1
@@ -26,7 +30,9 @@ for i in range(counter):
         words += 1
 
 L = letters * 100 / words
+
 S = sentences * 100 / words
+
 index = round(0.0588 * L - 0.296 * S - 15.8)
 
 # readability output
