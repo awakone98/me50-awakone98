@@ -21,7 +21,7 @@ def main(void):
               wordcount++;
          else if (text[i] == '.' || text[i] == '!' || text[i] == '?')
              sentencecount++;
-  print("letterscount and wordcount = %i, sentencecount = %i\n");
+#print("letterscount and wordcount = %i, sentencecount = %i\n");
 
     float grade = 0.0588 * (100 * (float) letterscount / (float) wordcount) - 0.296 * (100 * (float) sentencecount / 
                   (float) wordcount) - 15.8;
