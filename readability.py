@@ -43,7 +43,7 @@ if (index >= 16):
     print("Grade 16+")
 
 else:
-    print("Grade {index}")
+    print(f"Grade {index}")
     
 
 #source https://github.com/me50/awakone98/blob/cs50/problems/2020/x/readability/readability.c
