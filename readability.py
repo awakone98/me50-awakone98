@@ -1,41 +1,37 @@
-#include cs50 
+#include <stdio.h>
+#include <cs50.h>
+#include <string.h>
+#include <math.h>
 #include get_string
 from cs50 import get_string
 
+#user input
 text = get_string("Text: \n")
-counter = 0
-words = 0
-letters = 0
-sentences = 0
+    
+def main(void):
+    letterscount = 0;
+    wordcount = 1;
+    sentencecount = 0;
 
-def main():
-    if (index < 1): 
-       print("Before Grade 1")
-    if (index >= 16):
-       print("Grade 16+")
+#Wordcount
+  for (int i = 0; i < strlen(text); i++)
+         if ((text[i] >= 'a' && text[i] <= 'z') || (text[i] >= 'A' && text[i] <= 'Z'))
+            letterscount++;
+         else if (text[i] == ' ')
+              wordcount++;
+         else if (text[i] == '.' || text[i] == '!' || text[i] == '?')
+             sentencecount++;
+  print("letterscount and wordcount = %i, sentencecount = %i\n");
+
+    float grade = 0.0588 * (100 * (float) letterscount / (float) wordcount) - 0.296 * (100 * (float) sentencecount / 
+                  (float) wordcount) - 15.8;
+    if (grade < 16 && grade >= 0)
+        print("Grade %i\n", (int) round(grade));
+    else if (grade >= 16)
+        print("Grade 16+\n");
     else:
-       print(f"Grade {index}")
+        print("Before Grade 1\n");
 
-#User input
-for index in text:
-    counter += 1
-
-for index in range(counter):
-    # letters count
-    if (ord(text[index]) >= 65 and ord(text[index]) <= 122):
-        letters += 1
-
-    # word count
-    if (ord(text[index]) == 32 and (ord(text[index - 1]) != 33 and ord(text[index - 1]) != 46 and ord(text[index - 1]) != 63)):
-        words += 1
-
-    # sentences count
-    if (ord(text[index]) == 33 or ord(text[index]) == 46 or ord(text[index]) == 63):
-        sentences += 1
-        words += 1
-
-L = letters * 100 / words
-S = sentences * 100 / words
-index = round(0.0588 * L - 0.296 * S - 15.8)
-
-#source https://www.youtube.com/watch?v=3NsWmAXhzU4
+if __name__ == "__main__":
+     main()
+     
