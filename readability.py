@@ -33,7 +33,7 @@ L = letters * 100 / words
 
 S = sentences * 100 / words
 
-index = round(0.0588 * L - 0.296 * S - 15.8)
+index = round(0.058 * L - 0.29 * S - 15.8)
 
 # readability output
 if (index < 1):
