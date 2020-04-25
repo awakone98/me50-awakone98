@@ -36,13 +36,13 @@ index = round(0.0588 * L - 0.296 * S - 15.8)
 if (index < 1):
     print("Before Grade 1")
 
-else if (index >= 16):
+if (index >= 16):
     print("Grade 16+")
 
-else:
+or else:
     print("Grade {index}")
     
 if __name__ == "__main__":
-     main()
+     main(void)
 
 #source https://github.com/me50/awakone98/blob/cs50/problems/2020/x/readability/readability.c
