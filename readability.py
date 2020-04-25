@@ -1,9 +1,7 @@
-#include <stdio.h>
-#include <cs50.h>
-#include <string.h>
-#include <math.h>
-#include get_string
 from cs50 import get_string
+from cs50 import math.h
+from cs50 import stdio.h
+
 
 #user input
 text = get_string("Text: \n")
@@ -28,9 +26,7 @@ def main(void):
 
 L = letters * 100 / words
 S = sentences * 100 / words
-
-# index formula
-index = round(0.0588 * L - 0.296 * S - 15.8)
+i = round(0.0588 * L - 0.296 * S - 15.8)
 
 # output
 if (index < 1):
