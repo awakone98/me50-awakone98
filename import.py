@@ -40,6 +40,7 @@ def main():
 
             if (len(names) == 4):
                 cur.execute("students (first, last, house, birth) VALUES(?, ?, ?, ?)", names[:4])
-
+ con.commit()
+    con.close()
   
 

@@ -31,5 +31,5 @@ def main():
             print("{} {}, born {}".format(row[0], row[2], row[3]))
         else:
             print("{} {} {}, born {}".format(row[0], row[1], row[2], row[3]))
-
+    con.close()
    
