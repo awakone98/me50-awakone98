@@ -1,46 +1,27 @@
-import sqlite3
-import csv
-import sys
+from cs50 import SQL
+from csv import reader
+from sys import argv
 
+db = SQL("sqlite:///students.db")
 
-def main():
+#check that correct codes being used 
+if len(argv) < 2:
+    print("usage error, import.py characters.csv")
+    exit()
 
-    # checking argv 
-    if (len(sys.argv) != 2):
-        sys.exit("Usage: import.py file.csv")
+# open students csv file into list
+with open(argv[1], newline='') as charactersFile:
+    characters = reader(charactersFile)
+    for character in characters:
+        if character[0] == 'name':
+            continue
+        # insert full name
+        fullName = character[0].split()
+        # insert full name and info, NULL theres no middle name
+        if len(fullName) < 3:
+            db.execute("INSERT INTO students(first, middle, last, house, birth) VALUES(?, ?, ?, ?, ?)",
+                       fullName[0], None, fullName[1], character[1], character[2])
 
-    filename = sys.argv[1]
-
-    if not (filename.endswith(".csv")):
-        sys.exit("provide a *.csv")
-
-    # use .db file and make a cursor
-    sqlite_file = "students.db"
-    con = sqlite3.connect(sqlite_file)
-
-    cur = con.cursor()
-
-    # import from csv file
-    with open("characters.csv", "r") as characters:
-
-        # dictionary reader that iterates through rows
-        reader = csv.DictReader(characters)
-
-        for row in reader:
-            names = []
-
-            for part in row["name"].split(" "):
-                names.append(part)
-
-            names.append(row["house"])
-            names.append(row["birth"])
-
-            if (len(names) == 5):
-                cur.execute("students (first, middle, last, house, birth) VALUES(?, ?, ?, ?, ?)", names[:5])
-
-            if (len(names) == 4):
-                cur.execute("students (first, last, house, birth) VALUES(?, ?, ?, ?)", names[:4])
- con.commit()
-    con.close()
-  
-
+        else:
+            db.execute("INSERT INTO students(first, middle, last, house, birth) VALUES(?, ?, ?, ?, ?)",
+                       fullName[0], fullName[1], fullName[2], character[1], character[2])
