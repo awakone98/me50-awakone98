@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<title>CS50 Final Project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<body>
+
+<!-- Side Navigation -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
+  <h1 class="w3-xxxlarge w3-text-theme">Side Navigation</h1>
+  <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Link 4</a>
+</nav>
+
+<!-- Header -->
+<header class="w3-container w3-theme w3-padding" id="myHeader">
+  <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i>
+  <div class="w3-center">
+  <h4>A guide to the basics of</h4>
+  <h1 class="w3-xxxlarge w3-animate-bottom">Intellectual Property Law</h1>
+    <div class="w3-padding-32">
+      <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">LEARN MORE</button>
+    </div>
+  </div>
+</header>
+
+<!-- Modal -->
+<div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-top">
+      <header class="w3-container w3-theme-l1">
+        <span onclick="document.getElementById('id01').style.display='none'"
+        class="w3-button w3-display-topright">×</span>
+        <h4>This website provides an overview of the systems of intellectual property law (IP). </h4>
+        <h5> It serves to inform the everyday person of their rights and provide resource to prospective IP Law students <i class="fa fa-smile-o"></i></h5>
+      </header>
+      <div class="w3-padding">
+        <p>Intellectual Property is "any product of the human intellect that the law protects from unauthorized use by others"</p>
+        <p>Go to <a class="https://www.law.cornell.edu/wex/intellectual_property" href="https://www.law.cornell.edu/wex/intellectual_property">Cornell Law School Legal Information Institue</a> to learn more!</p>
+      </div>
+      <footer class="w3-container w3-theme-l1">
+        <p>Thank You!</p>
+      </footer>
+    </div>
+</div>
+
+<hr>
+<h2 class="w3-center">Background Information</h2>
+<div class="w3-border">
+<div class="w3-bar w3-theme">
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'London')">The Constitution</button>
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'Paris')">Congress</button>
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'Tokyo')">Civil Lawsuits</button>
+   <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,'Intellectual Property Law')">Intellectual Property</button>
+</div>
+
+<div id="London" class="w3-container city w3-animate-opacity">
+  <h2>The Constitution</h2>
+  <p>The Constitution gives Congress the power to pass laws related to intellectual property. Article I, Section 8 of the U.S. Constitution gives Congress the authority to grant authors and inventors copyright and patent rights. Federal copyright law is found in chapters 1 through 8 and 10 through 12 of title 17 of the United States Code. Patent law is found in Title 35 of the United States Code.</p>
+</div>
+
+<div id="Paris" class="w3-container city w3-animate-opacity">
+  <h2>Congress</h2>
+  <p>Congress’ power to enact federal trademark protection is derived from the Commerce Clause. The Lanham Act is the primary statute that covers trademark law, but there are also state laws associated with trademarks.Most states have adopted part or all of the Uniform Trade Secrets Act, which protects any confidential business information that gives an enterprise an edge over the competition. Trade secrets include manufacturing, industrial, and commercial secrets.</p>
+</div>
+
+<div id="Tokyo" class="w3-container city w3-animate-opacity">
+  <h2>Civil lawsuits</h2>
+  <p>In general, intellectual property rights are enforced by rights holders through civil lawsuits against the party that is infringing against the right through its conduct. The particular remedies for infringement vary depending on the types of intellectual property at issue.</p>
+</div>
+
+<div id="Intellectual Property Law" class="w3-container city w3-animate-opacity">
+  <h2>Intellectual Property Law</h2>
+  <p>A wide body of federal and state laws protects creative property such as writing, music, drawings, paintings, photography, and films. Collectively, this body of law is called “intellectual property” law, which includes copyright, trademark, and patent laws, each applicable in various situations and each with its own set of technical rules.</p>
+</div>
+
+</div>
+
+
+<div class="w3-row-padding w3-center w3-margin-top">
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>Copyrights</h3><br>
+  <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+  <p>Copyright protection is afforded to “original works of authorship.”</p>
+  <p> Copyright protection does not extend to simple ideas, systems, concepts, principles, or discoveries in their abstract forms</p>
+  <p>Copyright protection extends to work that is fixed in a tangible medium of expression that can be easily communicated.</p>
+  <p>Copyright includes the right to reproduce, the right to create derivative works, the right to distribute, and the right to publicly perform.</p>
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>Trademarks</h3><br>
+  <i class="fa fa-css3 w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+  <p>To obtain trademark protection, a word, phrase, logo, symbol, shape, sound, fragrance, or color must be used in commerce by a producer to identify goods, and it must also be distinctive (like the above logo).</p>
+  <p>Exclusive rights to a trademark are awarded to the first producer to use it in commerce. </p>
+  <p>The second requirement of distinctiveness encompasses four traits: arbitrary, fanciful, suggestive, descriptive, and generic.</p>
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>Patent</h3><br>
+  <i class="fa fa-diamond w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
+  <p>A patent is a monopoly that provides an exclusive right to make, use, offer to sell, or sell a particular invention in the US, or import it into the US.</p>
+  <p>The purpose of patents is to encourage inventers to invest their time and resources in developing new and useful discoveries.</p>
+  <p>In order to get a patent, the application to the USPTO must demonstrate subject matter that can be patented, usefulness, novelty, non-obviousness, and enablement.</p>
+  </div>
+</div>
+</div>
+
+<div class="w3-container">
+<hr>
+<div class="w3-center">
+  <h2>Legal Vocabulary</h2>
+</div>
+
+<div class="w3-row">
+  <div class="w3-col w3-container m2 w3-red"><p>IP</p></div>
+  <div class="w3-col w3-container m2 w3-blue"><p>Property</p></div>
+  <div class="w3-col w3-container m2 w3-blue-grey"><p>Patents</p></div>
+  <div class="w3-col w3-container m2 w3-teal"><p>Trademark</p></div>
+  <div class="w3-col w3-container m2 w3-yellow"><p>Copyright</p></div>
+  <div class="w3-col w3-container m2 w3-orange"><p>Law</p></div>
+</div>
+
+
+<div class="w3-center">
+  <div class="w3-dropdown-hover">
+    <button class="w3-button w3-theme">Dropdown <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-border">
+      <a href="#" class="w3-bar-item w3-button">Link 1</a>
+      <a href="#" class="w3-bar-item w3-button">Link 2</a>
+      <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<h2 class="w3-center">Paid Advertisements</h2>
+<div class="w3-content" style="max-width:800px;position:relative">
+
+<img class="mySlides w3-animate-opacity" src="/w3images/snow.jpg" style="width:100%">
+<img class="mySlides w3-animate-opacity" src="/w3images/lights.jpg" style="width:100%">
+<img class="mySlides w3-animate-opacity" src="/w3images/mountains.jpg" style="width:100%">
+<img class="mySlides w3-animate-opacity" src="/w3images/forest.jpg" style="width:100%">
+
+<a class="w3-button w3-hover-dark-grey" style="position:absolute;top:45%;left:0;" onclick="plusDivs(-1)">❮</a>
+<a class="w3-button w3-hover-dark-grey" style="position:absolute;top:45%;right:0;" onclick="plusDivs(+1)">❯</a>
+</div>
+
+
+<hr>
+<h2 class="w3-center">Sign up for more information</h2>
+</div>
+
+<div class="w3-row-padding">
+
+<div class="w3-half">
+<form class="w3-container w3-card-4">
+  <h2>Input Form</h2>
+  <div class="w3-section">
+    <input class="w3-input" type="text" required>
+    <label>Name</label>
+  </div>
+  <div class="w3-section">
+    <input class="w3-input" type="text" required>
+    <label>Email</label>
+  </div>
+  <div class="w3-section">
+    <input class="w3-input" type="text" required>
+    <label>Subject</label>
+  </div>
+
+  <div class="w3-row">
+  <div class="w3-half">
+    <input id="milk" class="w3-check" type="checkbox" checked="checked">
+    <label>Copyright</label>
+    <br>
+    <input id="sugar" class="w3-check" type="checkbox">
+    <label>Patent</label>
+    <br>
+    <input id="lemon" class="w3-check" type="checkbox" disabled>
+    <label>Trademarks</label>
+    <br><br>
+  </div>
+
+  <div class="w3-half">
+    <input id="male" class="w3-radio" type="radio" name="gender" value="male" checked>
+    <label>Seeking Legal Information</label>
+    <br>
+    <input id="female" class="w3-radio" type="radio" name="gender" value="female">
+    <label>Law Student</label>
+    <br>
+    <input id="unknown" class="w3-radio" type="radio" name="gender" value="" disabled>
+    <label> Interested</label>
+  </div>
+  </div>
+</form>
+</div>
+
+
+<h2 class="w3-center"></h2>
+<div class="w3-container">
+
+<div class="w3-light-gray">
+  <div id="myBar" class="w3-center w3-padding w3-theme" style="width:5%">5%</div>
+</div><br>
+<button class="w3-btn w3-theme" onclick="move()">Submit Form</button>
+</div>
+<hr>
+
+
+<hr>
+<div class="w3-center">
+  <h2>Page's</h2>
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-theme">«</a>
+      <a href="#" class="w3-bar-item w3-button w3-theme w3-hover-theme">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-theme">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-theme">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-theme">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-theme">5</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-theme">»</a>
+    </div>
+  </div>
+</div>
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-dark w3-padding-16">
+  <h3>Visit me on Github at awakone98 Harvardx CS50</h3>
+</footer>
+
+<!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
+<script>
+// Side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "100%";
+  x.style.fontSize = "40px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Tabs
+function openCity(evt, cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  var activebtn = document.getElementsByClassName("testbtn");
+  for (i = 0; i < x.length; i++) {
+    activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-dark-grey";
+}
+
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
+
+// Accordions
+function myAccFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Slideshows
+var slideIndex = 1;
+
+function plusDivs(n) {
+  slideIndex = slideIndex + n;
+  showDivs(slideIndex);
+}
+
+function showDivs(n) {
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+
+showDivs(1);
+
+// Progress Bars
+function move() {
+  var elem = document.getElementById("myBar");
+  var width = 5;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width == 100) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + '%';
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+}
+</script>
+
+</body>
+</html>
+
